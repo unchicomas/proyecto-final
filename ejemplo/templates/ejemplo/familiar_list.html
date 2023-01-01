@@ -8,12 +8,11 @@
 </head>
 <body>
 <ul>
-    .
 
 {% block buscar %} {% endblock %}
 
 {% for familiar in object_list %}
-    <li>{{familiar}}</li>
+    <li>{{familiar.id}} -- {{familiar.direccion}} -- {{familiar.nombre}}</li>
 {% endfor %}    
 </ul>
 

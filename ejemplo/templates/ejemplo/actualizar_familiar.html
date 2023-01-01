@@ -3,12 +3,14 @@
 {% block contenido %}
 
 <!-- Prestar atención a la variable familiar.id -->
-<form action="/mi-familia/actualizar/{{ familiar.id }}" method="post"> 
+<form action="/mi-familia/actualizar/{{ familiar.id }}" method="post">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Actualizar">
+    {{ form.as_p }}
+    <input type="submit" value="Actulizar">
 </form>
 
-<h2 style="color:blue">{{msg_exito}}</h2>
+<h2 style="color:green">{{msg_exito}}</h2>
+
+<a href="/mi-familia">Volver a la lista de Familia</a>
 
 {% endblock %}
